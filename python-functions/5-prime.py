@@ -1,12 +1,14 @@
 def is_prime(number):
-    prime1 = 6 * number - 1
-    prime2 = 6 * number + 1
-    if number == prime1 or number == prime2 :
-        return True
+    i = 0
+    # for positive number input
+    if number > 1:
+# for the range of the prime number
+        for i in range(2,number):
+            if (number % i) == 0:
+                return False
+            else:
+                pass
+        else:
+            return True
     else:
         return False
-#   or number==2 or number==3   
-print(is_prime(17))
-print(is_prime(15))
-print(is_prime(-5))
-print(is_prime(0))
