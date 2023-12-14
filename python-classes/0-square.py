@@ -7,5 +7,5 @@ class Square:
     """
 
     def __init__(self, size):
+        """now this is the initialization part"""
         self.__size = size
-        # now the size of the square is private
