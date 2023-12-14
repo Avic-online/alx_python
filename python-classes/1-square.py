@@ -1,5 +1,8 @@
-#!/usr/bin/python3
-# python3 -c 'print(__import__("my_module").__doc__)'
+"""
+Write a class Square that defines a
+square by: (based on 0-square.py)
+"""
+
 class Square:
     """
     python3 -c 'print(__import__("my_module").MyClass.__doc__)'
