@@ -1,6 +1,7 @@
 """
 Write a class Square that defines a
 square by: (based on 0-square.py)
+(python3 -c 'print(__import__("my_module").__doc__)')
 """
 
 class Square:

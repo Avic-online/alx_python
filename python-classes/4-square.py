@@ -1,36 +1,41 @@
 """
 Write a class Square that
 defines a square by: (based on 3-square.py)
+(python3 -c 'print(__import__("my_module").__doc__)')
 """
 
 class Square:
     """
-    okay okay okay
+     (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
     """
     def __init__(self, size=0):
         """
-        function okay okay okay
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'.
         """
         self.__size = size
         self.__validate_size()
     @property
     def size(self):
         """
-        property getter here
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'.
         """
         return self.__size
     
     @size.setter
     def size(self, value):
         """
-        set the size of the new square here
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'.
         """
         self.__size = value
         self.__validate_size()
 
     def __validate_size(self):
         """
-        place where size is validated
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'.
         """
         if not isinstance(self.__size, int):
             raise TypeError("size must be an integer")
@@ -38,7 +43,8 @@ class Square:
             raise ValueError("size must be >= 0")
     def area(self):
         """
-        this is doc for the area
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'.
         """
         return self.__size ** 2
     
@@ -46,6 +52,8 @@ class Square:
         """
         Prints the square using the character '#' in stdout.
         If size is equal to 0, prints an empty line.
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'.
         """
         if self.__size == 0:
             print()
