@@ -1,3 +1,7 @@
+"""
+This is the program for class inheritance
+it over-writes and also displays square
+"""
 class BaseGeometry:
     """ This is the class for Base Geometry"""
     def __init__(self):
