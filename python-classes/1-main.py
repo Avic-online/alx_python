@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 Square = __import__('1-square').Square
-"""
-python3 -c 'print(__import__("my_module").__doc__)'
-"""
+""" python3 -c 'print(__import__("my_module").__doc__)' """
 
 my_square_1 = Square(3)
 print(type(my_square_1))
@@ -35,3 +33,5 @@ try:
     print(my_square_4.__dict__)
 except Exception as e:
     print(e)
+
+help(Square)
