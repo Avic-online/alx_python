@@ -8,3 +8,4 @@ class Square:
 
     def __init__(self, size):
         self.__size = size
+        # now the size of the square is private
