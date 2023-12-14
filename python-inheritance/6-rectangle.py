@@ -1,3 +1,8 @@
+"""
+This inheritance python program is the rectangle class
+inheriting from the base geometry class
+"""
+
 class BaseGeometry:
     """ This is the class for Base Geometry"""
     def __init__(self):

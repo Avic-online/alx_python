@@ -1,3 +1,8 @@
+"""
+This base geometry class program have a validator
+and it cares the self, name and value
+"""
+
 class BaseGeometry:
     """ This is the class for Base Geometry"""
     def __init__(self):

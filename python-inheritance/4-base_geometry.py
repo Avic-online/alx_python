@@ -1,3 +1,8 @@
+"""
+This program creates a class base geometry
+and it raises the exception of this class!
+"""
+
 class BaseGeometry:
     """ This is the class for Base Geometry"""
     def __init__(self):

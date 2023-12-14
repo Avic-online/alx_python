@@ -1,3 +1,8 @@
+"""
+This is the documentation for this rectangular inheritance code
+some of this code was gotten from task 6
+"""
+
 class BaseGeometry:
     """ This is the class for Base Geometry"""
     def __init__(self):
