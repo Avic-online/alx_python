@@ -49,6 +49,19 @@ class Rectangle(Base):
         """Override the string of our rectangle."""
         return f'[Rectangle] ({id(self)}) {self.x}/{self.y} - {self.width}/{self.height}'
 
+    def update(self, *args):
+        """this class method updates the rectangle attribute"""
+        if len(args) >= 1:
+            self.x = args[0]
+        elif len(args) >= 2:
+            self.width = args[1]
+        elif len(args) >= 3:
+            self.height = args[2]
+        elif len(args) >= 4:
+            self.x = args[3]
+        elif len(args) >= 5:
+            self.y =args[4]
+
     @property
     def width(self):
         """
