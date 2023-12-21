@@ -135,6 +135,7 @@ class Rectangle(Base):
         this is to set height of with a self arg and a value
         argument declared on it
         """
+        self.__height = value
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value <= 0:
