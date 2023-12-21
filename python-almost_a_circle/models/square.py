@@ -2,7 +2,7 @@
 this is a module of the program square that 
 inherits from the rectangle
 """
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """
