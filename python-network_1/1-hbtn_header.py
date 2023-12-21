@@ -6,9 +6,9 @@ it is using a specific uniform resource locator and header
 import requests
 import sys
 
-url = https://www.britishairways.com/travel/home/public/en_ng/
+# url = https://www.britishairways.com/travel/home/public/en_ng/
 
-response = requests.get(url)
+# response = requests.get(url)
 
 def get_x_request_id():
     try:
