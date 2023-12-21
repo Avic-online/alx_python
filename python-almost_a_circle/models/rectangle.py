@@ -20,78 +20,7 @@ class Rectangle(Base):
     now its super class, Base
     """
 
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        Class constructor for Rectangle.
-        this function initializes itself with arguments
-        """
-        super().__init__(id)
-
-        """
-        this is a documentation of the module
-        here we will import the Base class from our python base file
-        and do some inheritance
-        """
-
-        self._width = width
-        self._height = height
-        self._x = x
-        self._y = y
-        """
-        super class for the id
-        also declaration of the variables assignment
-        """
-    """under is the method for area with a self arg"""
-    def area(self):
-        """
-        this is the area method in the class
-        it has a self arg
-        """
-        return self.height * self.width   #this will return an area
-        
-    """below starts the method for display method with a self arg"""
-    def display(self):
-        """
-        This diaplays an output with #
-        it has a for loop statement
-        """
-        for _ in range(self.width):
-            print('#' * self.width)
-        for _ in range(self.y):
-            print()  # Print empty lines for y
-
-        for _ in range(self.height):
-            print(' ' * self.x + '#' * self.width)
-
-    """this is the string method/function starting below"""
-    def __str__(self):
-        """Override the string of our rectangle."""
-        return f'[Rectangle] ({id(self)}) {self.x}/{self.y} - {self.width}/{self.height}'
-    
-    """The function below updates our rectangle"""
-    def update(self, *args, **kwargs):
-        """this class method updates the rectangle attribute"""
-        if args:
-            #use this condition to update the table if args is not empty
-            if len(args) >= 1:
-                self.x = args[0]
-            elif len(args) >= 2:
-                self.width = args[1]
-            elif len(args) >= 3:
-                self.height = args[2]
-            elif len(args) >= 4:
-                self.x = args[3]
-            elif len(args) >= 5:
-                self.y =args[4]
-        elif kwargs:
-            # use this condition of keyword argument to update rectangle
-            # if the args is empty
-            self.x = kwargs.get('x', self.x)
-            self.y = kwargs.get('y', self.y)
-            self.width = kwargs.get('width', self.width)
-            self.height = kwargs.get('height', self.height)
-
-    """the property call is a getter function for the
+     """the property call is a getter function for the
     width of our rectangle"""
     @property
     def width(self):
@@ -190,3 +119,76 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
         self.__y = value
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        Class constructor for Rectangle.
+        this function initializes itself with arguments
+        """
+        super().__init__(id)
+
+        """
+        this is a documentation of the module
+        here we will import the Base class from our python base file
+        and do some inheritance
+        """
+
+        self._width = width
+        self._height = height
+        self._x = x
+        self._y = y
+        """
+        super class for the id
+        also declaration of the variables assignment
+        """
+    """under is the method for area with a self arg"""
+    def area(self):
+        """
+        this is the area method in the class
+        it has a self arg
+        """
+        return self.height * self.width   #this will return an area
+        
+    """below starts the method for display method with a self arg"""
+    def display(self):
+        """
+        This diaplays an output with #
+        it has a for loop statement
+        """
+        for _ in range(self.width):
+            print('#' * self.width)
+        for _ in range(self.y):
+            print()  # Print empty lines for y
+
+        for _ in range(self.height):
+            print(' ' * self.x + '#' * self.width)
+
+    """this is the string method/function starting below"""
+    def __str__(self):
+        """Override the string of our rectangle."""
+        return f'[Rectangle] ({id(self)}) {self.x}/{self.y} - {self.width}/{self.height}'
+    
+    """The function below updates our rectangle"""
+    def update(self, *args, **kwargs):
+        """this class method updates the rectangle attribute"""
+        if args:
+            #use this condition to update the table if args is not empty
+            if len(args) >= 1:
+                self.x = args[0]
+            elif len(args) >= 2:
+                self.width = args[1]
+            elif len(args) >= 3:
+                self.height = args[2]
+            elif len(args) >= 4:
+                self.x = args[3]
+            elif len(args) >= 5:
+                self.y =args[4]
+        elif kwargs:
+            # use this condition of keyword argument to update rectangle
+            # if the args is empty
+            self.x = kwargs.get('x', self.x)
+            self.y = kwargs.get('y', self.y)
+            self.width = kwargs.get('width', self.width)
+            self.height = kwargs.get('height', self.height)
+
+   
