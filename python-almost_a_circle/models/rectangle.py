@@ -39,6 +39,11 @@ class Rectangle(Base):
         """This diaplays an output with #"""
         for _ in range(self.width):
             print('#' * self.width)
+        for _ in range(self.y):
+            print()  # Print empty lines for y
+
+        for _ in range(self.height):
+            print(' ' * self.x + '#' * self.width)
 
     def __str__(self):
         """Override the string of our rectangle."""
