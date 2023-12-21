@@ -67,7 +67,7 @@ class Rectangle(Base):
     """this is the string method/function starting below"""
     def __str__(self):
         """Override the string of our rectangle."""
-        return f'[Rectangle] ({id(self)}) {self.x}/{self.y} - {self.width}/{self.height}'
+        return f'[Rectangle] {self.x}/{self.y} - {self.width}/{self.height}'
     
     """The function below updates our rectangle"""
     def update(self, *args, **kwargs):
