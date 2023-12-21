@@ -16,6 +16,20 @@ class Rectangle(Base):
     now its super class, Base
     """
 
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        Class constructor for Rectangle.
+        this function initializes itself with arguments
+        """
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+        """
+        super class for the id
+        """
+
     @property
     def width(self):
         return self.__width
@@ -68,18 +82,4 @@ class Rectangle(Base):
         self.__y = value
         """
         this is to set y
-        """
-
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        Class constructor for Rectangle.
-        this function initializes itself with arguments
-        """
-        super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
-        """
-        super class for the id
         """
