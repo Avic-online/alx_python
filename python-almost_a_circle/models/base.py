@@ -4,7 +4,12 @@
 """
 
 class Base:
-    __nb_objects = 0
+
+    """
+    This is the class base
+    """
+        
+    __nb_objects = 0   #private attribute of the Bae class
 
     def __init__(self, id=None):
         """
