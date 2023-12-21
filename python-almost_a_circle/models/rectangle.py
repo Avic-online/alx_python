@@ -20,7 +20,7 @@ class Rectangle(Base):
     now its super class, Base
     """
 
-    def __init__(self, width, height, x=0, y=0, id=0):
+    def __init__(self, width, height, x=0, y=0, id=1):
         """
         Class constructor for Rectangle.
         this function initializes itself with arguments
