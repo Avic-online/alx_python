@@ -7,6 +7,7 @@ from base import Base
 
 """
 imported module above
+okay
 """
 
 class Rectangle(Base):
@@ -38,26 +39,36 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         self.__height = value
-        #this is to set height
+        """
+        this is to set y
+        """
     @property
     def x(self):
         return self.__x
-        # this is to get x
+        """
+        this is to set y
+        """
     
     @x.setter
     def x(self, value):
         self.__x = value
-        # this is to set x
+        """
+        this is to set y
+        """
 
     @property
     def y(self):
         return self.__y
-        #this is to get y
+        """
+        this is to set y
+        """
     
     @y.setter
     def y(self, value):
         self.__y = value
-        #this is to set y
+        """
+        this is to set y
+        """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
@@ -69,4 +80,6 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-
+        """
+        super class for the id
+        """
