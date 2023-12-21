@@ -5,6 +5,10 @@ and do some inheritance
 """
 from base import Base
 
+"""
+imported module above
+"""
+
 class Rectangle(Base):
     """
     This is a class Rectangle that inherits from another class,
