@@ -3,7 +3,7 @@ this is a documentation of the module
 here we will import the Base class from our python base file
 and do some inheritance
 """
-from base import Base
+from models.base import Base
 
 """
 imported module above
