@@ -40,6 +40,9 @@ class Rectangle(Base):
         for _ in range(self.width):
             print('#' * self.width)
 
+    def __str__(self):
+        """Override the string of our rectangle."""
+        return f'[Rectangle] ({id(self)}) {self.x}/{self.y} - {self.width}/{self.height}'
 
     @property
     def width(self):
