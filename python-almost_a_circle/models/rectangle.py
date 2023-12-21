@@ -34,6 +34,12 @@ class Rectangle(Base):
         this is the area method in the class
         """
         return self.height * self.width
+    
+    def display(self):
+        """This diaplays an output with #"""
+        for _ in range(self.width):
+            print('#' * self.width)
+
 
     @property
     def width(self):
