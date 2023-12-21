@@ -26,6 +26,13 @@ class Rectangle(Base):
         this function initializes itself with arguments
         """
         super().__init__(id)
+
+        """
+        this is a documentation of the module
+        here we will import the Base class from our python base file
+        and do some inheritance
+        """
+        
         self.width = width
         self.height = height
         self.x = x
