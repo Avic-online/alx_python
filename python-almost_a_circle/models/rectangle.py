@@ -29,6 +29,11 @@ class Rectangle(Base):
         """
         super class for the id
         """
+    def area(self):
+        """
+        this is the area method in the class
+        """
+        return self.height * self.width
 
     @property
     def width(self):
