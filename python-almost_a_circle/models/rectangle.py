@@ -59,10 +59,10 @@ class Rectangle(Base):
         # for _ in range(self.width):
         #     print('#' * self.width)
         for _ in range(self.y):
-            print('$')  # Print empty lines for y
+            print()  # Print empty lines for y
 
         for _ in range(self.height):
-            print('#' * self.width, '$')
+            print('#' * self.width)
             # print(' ' * self.x  + '#' * self.width)
 
     """this is the string method/function starting below"""
