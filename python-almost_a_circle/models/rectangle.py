@@ -20,7 +20,7 @@ class Rectangle(Base):
     now its super class, Base
     """
 
-    def __init__(self, width, height, x=0, y=0, id=None):
+    def __init__(self, width, height, x=0, y=0, id=0):
         """
         Class constructor for Rectangle.
         this function initializes itself with arguments
@@ -32,11 +32,12 @@ class Rectangle(Base):
         here we will import the Base class from our python base file
         and do some inheritance
         """
-
+   
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
+        self.id = id
         """
         super class for the id
         also declaration of the variables assignment
@@ -67,7 +68,7 @@ class Rectangle(Base):
     """this is the string method/function starting below"""
     def __str__(self):
         """Override the string of our rectangle."""
-        return f'[Rectangle] {self.x}/{self.y} - {self.width}/{self.height}'
+        return f'[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}'
     
     """The function below updates our rectangle"""
     def update(self, *args, **kwargs):
