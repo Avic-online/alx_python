@@ -28,15 +28,26 @@ class Rectangle(Base):
         self.y = y
         """
         super class for the id
+        also declaration of the variables assignment
         """
+    """under is the method for area with a self arg"""
     def area(self):
         """
         this is the area method in the class
+        it has a self arg
         """
         return self.height * self.width
-    
+        """
+        this is the return of the area
+        multiplication of the height and width
+        the height and width are both variables
+        """
+    """below starts the method for display method with a self arg"""
     def display(self):
-        """This diaplays an output with #"""
+        """
+        This diaplays an output with #
+        it has a for loop statement
+        """
         for _ in range(self.width):
             print('#' * self.width)
         for _ in range(self.y):
@@ -44,11 +55,11 @@ class Rectangle(Base):
 
         for _ in range(self.height):
             print(' ' * self.x + '#' * self.width)
-
+    """this is the string method/function starting below"""
     def __str__(self):
         """Override the string of our rectangle."""
         return f'[Rectangle] ({id(self)}) {self.x}/{self.y} - {self.width}/{self.height}'
-
+    """The function below updates our rectangle"""
     def update(self, *args, **kwargs):
         """this class method updates the rectangle attribute"""
         if args:
@@ -71,6 +82,8 @@ class Rectangle(Base):
             self.width = kwargs.get('width', self.width)
             self.height = kwargs.get('height', self.height)
 
+    """the property call is a getter function for the
+    width of our rectangle"""
     @property
     def width(self):
         """
@@ -78,7 +91,8 @@ class Rectangle(Base):
         """
         return self.__width
         
-    
+    """the setter call is a
+    setter function for the width of our rectangle"""
     @width.setter
     def width(self, value):
         """
@@ -90,13 +104,16 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
         
+    """the property call is a
+    getter function for the height of our rectangle"""
     @property
     def height(self):
         """
         this is to get height
          """
         return self.__height
-    
+    """the setter call is a
+    setter function for the height of our rectangle"""
     @height.setter
     def height(self, value):
         """
@@ -107,6 +124,9 @@ class Rectangle(Base):
         elif value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
+
+    """the getter call is a
+    getter function for x of our rectangle"""
     @property
     def x(self):
         """
@@ -114,6 +134,8 @@ class Rectangle(Base):
         """
         return self.__x
     
+    """the setter call is a
+    setter function for x of our rectangle"""
     @x.setter
     def x(self, value):
         """
@@ -125,6 +147,8 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
+    """the getter call is a
+    getter function for y of our rectangle"""
     @property
     def y(self):
         """
@@ -132,6 +156,8 @@ class Rectangle(Base):
         """
         return self.__y
     
+    """the setter call is a
+    setter function for y of our rectangle"""
     @y.setter
     def y(self, value):
         """
