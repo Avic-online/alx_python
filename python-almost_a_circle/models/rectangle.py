@@ -111,10 +111,8 @@ class Rectangle(Base):
         it has an @arg.setter function
         this setter had a getter
         """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        elif value <= 0:
-            raise ValueError("width must be > 0")
+        self.validate_integer("width", value)
+        self.validate_positive("width", value)
         self.__width = value
         
     """the property call is a
@@ -136,10 +134,8 @@ class Rectangle(Base):
         this is to set height of with a self arg and a value
         argument declared on it
         """
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        elif value <= 0:
-            raise ValueError("height must be > 0")
+        self.validate_integer("height", value)
+        self.validate_positive("height", value)
         self.__height = value
 
     """the getter call is a
@@ -160,10 +156,8 @@ class Rectangle(Base):
         this is to set height of with a self arg and a value
         argument declared on it
         """
-        if not isinstance(value, int):
-            raise TypeError("x must be an integer")
-        elif value < 0:
-            raise ValueError("x must be >= 0")
+        self.validate_integer("x", value)
+        self.validate_non_negative("x", value)
         self.__x = value
 
     """the getter call is a
@@ -184,10 +178,22 @@ class Rectangle(Base):
         this is to set height of with a self arg and a value
         argument declared on it
         """
+        self.validate_integer("y", value)
+        self.validate_non_negative("y", value)
+        self.__y = value
+
+    def validate_integer(self, name, value):
+        """Validates that the value is an integer."""
         if not isinstance(value, int):
-            raise TypeError("y must be an integer")
-        elif value < 0:
-            raise ValueError("y must be >= 0")
-        self.__y = value
-        self.__y = value
+            raise TypeError(f"{name} must be an integer")
+
+    def validate_positive(self, name, value):
+        """Validates that the value is greater than 0."""
+        if value <= 0:
+            raise ValueError(f"{name} must be > 0")
+
+    def validate_non_negative(self, name, value):
+        """Validates that the value is greater than or equal to 0."""
+        if value < 0:
+            raise ValueError(f"{name} must be >= 0")
    
