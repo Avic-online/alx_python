@@ -32,11 +32,11 @@ class Rectangle(Base):
         here we will import the Base class from our python base file
         and do some inheritance
         """
-        
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+
+        self._width = width
+        self._height = height
+        self._x = x
+        self._y = y
         """
         super class for the id
         also declaration of the variables assignment
