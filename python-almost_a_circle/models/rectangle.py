@@ -40,12 +40,8 @@ class Rectangle(Base):
         this is the area method in the class
         it has a self arg
         """
-        return self.height * self.width
-        """
-        this is the return of the area
-        multiplication of the height and width
-        the height and width are both variables
-        """
+        return self.height * self.width   #this will return an area
+        
     """below starts the method for display method with a self arg"""
     def display(self):
         """
@@ -59,10 +55,12 @@ class Rectangle(Base):
 
         for _ in range(self.height):
             print(' ' * self.x + '#' * self.width)
+
     """this is the string method/function starting below"""
     def __str__(self):
         """Override the string of our rectangle."""
         return f'[Rectangle] ({id(self)}) {self.x}/{self.y} - {self.width}/{self.height}'
+    
     """The function below updates our rectangle"""
     def update(self, *args, **kwargs):
         """this class method updates the rectangle attribute"""
@@ -95,7 +93,7 @@ class Rectangle(Base):
         it has an @property function
         this get will come with a setter
         """
-        return self.__width
+        return self.__width  #this returns private width variable
         
     """the setter call is a
     setter function for the width of our rectangle"""
@@ -119,14 +117,17 @@ class Rectangle(Base):
         """
         this is to get height with a variable arg self 
         which is a self assigned argument for the method
-         """
-        return self.__height
+         """   
+        return self.__height    #this returns private height variable
+    
+
     """the setter call is a
     setter function for the height of our rectangle"""
     @height.setter
     def height(self, value):
         """
-        this is to set y
+        this is to set height of with a self arg and a value
+        argument declared on it
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -139,16 +140,18 @@ class Rectangle(Base):
     @property
     def x(self):
         """
-        this is to set y
+        this is to set x of with a self arg and a value
+        argument declared on it
         """
-        return self.__x
+        return self.__x    #this returns private x variable
     
     """the setter call is a
     setter function for x of our rectangle"""
     @x.setter
     def x(self, value):
         """
-        this is to set y
+        this is to set height of with a self arg and a value
+        argument declared on it
         """
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
@@ -161,16 +164,18 @@ class Rectangle(Base):
     @property
     def y(self):
         """
-        this is to set y
+        this is to set height of with a self arg and a value
+        argument declared on it
         """
-        return self.__y
+        return self.__y     #this returns private y variable
     
     """the setter call is a
     setter function for y of our rectangle"""
     @y.setter
     def y(self, value):
         """
-        this is to set y
+        this is to set height of with a self arg and a value
+        argument declared on it
         """
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
