@@ -9,7 +9,11 @@ from base import Base
 imported module above
 okay
 """
-
+"""
+here is where the class starts 
+the class inheits from base class
+so base class is now its super class
+"""
 class Rectangle(Base):
     """
     This is a class Rectangle that inherits from another class,
@@ -88,6 +92,8 @@ class Rectangle(Base):
     def width(self):
         """
         this is to get the variable width
+        it has an @property function
+        this get will come with a setter
         """
         return self.__width
         
@@ -97,6 +103,8 @@ class Rectangle(Base):
     def width(self, value):
         """
         this is to set the variable width
+        it has an @arg.setter function
+        this setter had a getter
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -109,7 +117,8 @@ class Rectangle(Base):
     @property
     def height(self):
         """
-        this is to get height
+        this is to get height with a variable arg self 
+        which is a self assigned argument for the method
          """
         return self.__height
     """the setter call is a
