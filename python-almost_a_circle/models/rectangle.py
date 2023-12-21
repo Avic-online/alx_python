@@ -33,10 +33,10 @@ class Rectangle(Base):
         and do some inheritance
         """
 
-        self._width = width
-        self._height = height
-        self._x = x
-        self._y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
         """
         super class for the id
         also declaration of the variables assignment
