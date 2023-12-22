@@ -59,10 +59,10 @@ class Rectangle(Base):
         # for _ in range(self.width):
         #     print('#' * self.width)
         for _ in range(self.y):
-            print()  # Print empty lines for y
+            print('$')  # Print empty lines for y
 
         for _ in range(self.height):
-            print('#' * self.width)
+            print('#' * self.width, '$')
             # print(' ' * self.x  + '#' * self.width)
 
     """this is the string method/function starting below"""
@@ -114,6 +114,7 @@ class Rectangle(Base):
         """
         self.validate_integer(value, 'width')
         self.validate_positive(value, 'width')
+        self.validate_non_negative(value, 'width')
         self.__width = value
         
     """the property call is a
@@ -137,6 +138,7 @@ class Rectangle(Base):
         """
         self.validate_integer(value, 'height')
         self.validate_positive(value, 'height')
+        self.validate_non_negative(value, 'height')
         self.__height = value
 
     """the getter call is a
@@ -159,6 +161,7 @@ class Rectangle(Base):
         """
         self.validate_integer(value, 'x')
         self.validate_non_negative(value, 'x')
+        self.validate_positive(value, 'x')
         self.__x = value
 
     """the getter call is a
@@ -181,17 +184,18 @@ class Rectangle(Base):
         """
         self.validate_integer(value, 'y')
         self.validate_non_negative(value, 'y')
+        self.validate_positive(value, 'y')
         self.__y = value
 
-    def validate_integer(self, value, height):
+    def validate_integer(self, value, width):
         """Validates that the value is an integer."""
         if not isinstance(value, int):
-            raise TypeError(f"{height} must be an integer")
+            raise TypeError(f"{width} must be an integer")
 
-    def validate_positive(self, value, width):
+    def validate_positive(self, value, height):
         """Validates that the value is greater than 0."""
         if value <= 0:
-            raise ValueError(f"{width} must be > 0")
+            raise ValueError(f"{height} must be > 0")
 
     def validate_non_negative(self, value, x):
         """Validates that the value is greater than or equal to 0."""
