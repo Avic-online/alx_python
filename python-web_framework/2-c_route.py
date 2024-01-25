@@ -19,7 +19,6 @@ def hbnb():
 @app.route("/c/<text>", strict_slashes=False)
 def c_text(text):
     formatted_text = text.replace('_', ' ')
-    print(text)
     return render_template("copy_route.html", formatted_text=formatted_text)
 
 if __name__ == "__main__":
