@@ -6,7 +6,7 @@
 
 from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, strict_slashes=False)
 
 @app.route("/", strict_slashes=False)
 def home():
