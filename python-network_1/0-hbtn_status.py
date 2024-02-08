@@ -3,6 +3,7 @@
 # it is using a specific uniform resource locator and header
 
 import urllib.request
+import requests
 
 # url = https://alu-intranet.hbtn.io/status
 
