@@ -1,6 +1,4 @@
-#!/usr/bin/python3
-# This program will import a request
-# it is using a specific uniform resource locator and header
+# This program will import a request it is using a specific uniform resource locator and header
 import requests
 
 url = 'https://alu-intranet.hbtn.io/status'
