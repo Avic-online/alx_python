@@ -15,11 +15,11 @@
 #     print(f"Failed to fetch data. Status code: {response.status_code}")
 
 
-import urllib.request
+import requests
 
 if __name__ == "__main__":
-    request = urllib.request.Request('https://alu-intranet.hbtn.io/status')
-    with urllib.request.urlopen(request) as response:
+    request = requests.Request('https://alu-intranet.hbtn.io/status')
+    with requests.urlopen(request) as response:
         body = response.read()
         print('body response:')
         print('\t- type: {}'.format(type(body)))
