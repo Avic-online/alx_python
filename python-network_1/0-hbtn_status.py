@@ -17,11 +17,21 @@
 
 import requests
 
-if __name__ == "__main__":
-    request = requests.Request('https://intranet.hbtn.io/status')
-    with requests.urlopen(request) as response:
-        body = response.read()
-        print('body response:')
-        print('\t- type: {}'.format(type(body)))
-        print("\t- content: {}".format(type(body)))
-        print("\t- utf8 content: {}".format(body.decode("utf-8")))
+# if __name__ == "__main__":
+#     request = requests.Request('https://intranet.hbtn.io/status')
+#     with requests.urlopen(request) as response:
+#         body = response.read()
+#         print('body response:')
+#         print('\t- type: {}'.format(type(body)))
+#         print("\t- content: {}".format(type(body)))
+#         # print("\t- utf8 content: {}".format(body.decode("utf-8")))
+
+
+url = "http://alu-intranet.hbtn.io/status"
+response = requests.get(url)
+
+# to display the body
+
+print("Body response:")
+print(f"    - type: {type(response.text).__name__}")
+print(f"    - content: {response.text}")
