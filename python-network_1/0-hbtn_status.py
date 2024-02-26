@@ -27,7 +27,7 @@ import requests
 #         # print("\t- utf8 content: {}".format(body.decode("utf-8")))
 
 
-url = "http://alu-intranet.hbtn.io/status"
+url = "http://intranet.hbtn.io/status"
 response = requests.get(url)
 
 # to display the body
