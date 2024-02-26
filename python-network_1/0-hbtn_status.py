@@ -18,7 +18,7 @@
 import requests
 
 if __name__ == "__main__":
-    request = requests.Request('https://alu-intranet.hbtn.io/status')
+    request = requests.Request('https://intranet.hbtn.io/status')
     with requests.urlopen(request) as response:
         body = response.read()
         print('body response:')
