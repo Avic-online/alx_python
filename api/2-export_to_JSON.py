@@ -1,8 +1,8 @@
-# py program to export data in csv format
+# python program to export a file in json format
 
 import requests
 import sys
-import csv
+import json
 
 def get_employee_info(employee_id):
     employee_url = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
@@ -12,7 +12,6 @@ def get_employee_info(employee_id):
     if not employee_data:
         print(f"Error: Employee with ID {employee_id} not found.")
         return
-    
     employee_name = employee_data['name']
     user_id = employee_data['id']
 
@@ -33,24 +32,20 @@ def get_employee_info(employee_id):
         if task['completed']:
             print(f"\t{task['title']}")
 
-     
-    # to output TODO llist data to csv
-    csv_filename = f'{user_id}.csv'
-    with open(csv_filename, mode='w', newline='', encoding='utf-8') as csv_file:
-        fieldnames = ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
-        csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
-        csv_writer.writeheader()
-        for task in todo_data:
-            csv_writer.writerow({
-                "USER_ID": user_id,
-                "USERNAME": employee_name,
-                "TASK_COMPLETED_STATUS": str(task['completed']),
-                "TASK_TITLE": task['title']
-            })
+    # to output todo list to json
+    json_filename = f'{user_id}.json'
+    json_data = {
+        "USER_ID": [
+            {"task": task['title'], "completed": task['completed'], "username": employee_name}
+            for task in todo_data
+        ]
+    }
 
-    print(f"TODO list data exported to {csv_filename}")
+    with open(json_filename, mode='w', encoding='utf-8') as json_file:
+        json.dump(json_data, json_file, indent=2)
 
+    print(f"TODO list data exported to {json_filename}")
 
 
 if __name__ == "__main__":
