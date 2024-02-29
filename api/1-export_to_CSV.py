@@ -26,12 +26,12 @@ def get_employee_info(employee_id):
     completed_tasks = sum(task['completed'] for task in todo_data)
 
     # to output employee TODO list progress
-    print(f"Employee {employee_name} is done with tasks ({completed_tasks}/{total_tasks}):")
+    print(f"Employee {employee_name} is done with tasks({completed_tasks}/{total_tasks}):")
 
     # to output titles of completed taskes
     for task in todo_data:
         if task['completed']:
-            print(f"\t{task['title']}")
+            print(f"\t {task['title']}")
 
      
     # to output TODO llist data to csv
