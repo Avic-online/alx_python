@@ -5,7 +5,7 @@ import requests
 import sys
 
 def get_employee_info(employee_id):
-    employee_url = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
+    employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
     employee_response = requests.get(employee_url)
     employee_data = employee_response.json()
 
