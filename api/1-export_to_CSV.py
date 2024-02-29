@@ -1,8 +1,8 @@
 # py program to export data in csv format
 
+import csv
 import requests
 import sys
-import csv
 
 def get_employee_info(employee_id):
     employee_url = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
