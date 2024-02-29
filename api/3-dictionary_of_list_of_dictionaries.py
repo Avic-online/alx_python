@@ -1,10 +1,8 @@
-# python program to export a file in json format
+# python program to export file in json as dictionary
 
-import json
 import requests
 import sys
 
-# function for employee info
 def get_employee_info(employee_id):
     employee_url = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
     employee_response = requests.get(employee_url)
@@ -14,7 +12,6 @@ def get_employee_info(employee_id):
         print(f"Error: Employee with ID {employee_id} not found.")
         return
     employee_name = employee_data['name']
-    user_id = employee_data['id']
 
     # fetching the TODO list for the employee
     todo_url = f'https://jsonplaceholder.typicode.com/users/{employee_id}/todos'
@@ -26,27 +23,12 @@ def get_employee_info(employee_id):
     completed_tasks = sum(task['completed'] for task in todo_data)
 
     # to output employee TODO list progress
-    print(f"Employee {employee_name} is done with tasks ({completed_tasks}/{total_tasks}):")
+    print(f"Employee {employee_name} is done with tasks({completed_tasks}/{total_tasks}):")
 
     # to output titles of completed taskes
     for task in todo_data:
         if task['completed']:
-            print(f"\t{task['title']}")
-
-
-    # to output todo list to json
-    json_filename = f'{user_id}.json'
-    json_data = {
-        "USER_ID": [
-            {"task": task['title'], "completed": task['completed'], "username": employee_name}
-            for task in todo_data
-        ]
-    }
-
-    with open(json_filename, mode='w', encoding='utf-8') as json_file:
-        json.dump(json_data, json_file, indent=2)
-
-    print(f"TODO list data exported to {json_filename}")
+            print(f"\t {task['title']}")
 
 
 if __name__ == "__main__":
@@ -56,4 +38,3 @@ if __name__ == "__main__":
 
     employee_id = int(sys.argv[1])
     get_employee_info(employee_id)
-    
