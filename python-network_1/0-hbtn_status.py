@@ -3,7 +3,9 @@
 
 import requests
 
+# function to fetuc status
 def fetch_status():
+    # url to be fetched
     url = 'https://alu-intranet.hbtn.io/status'
     response = requests.get(url)
     
