@@ -7,7 +7,7 @@ import sys
 # function to get github user id
 def get_github_user_id(username, access_token):
     # url assignment
-    url = 'https://api.github.com/user'
+    url = 'https://api.github.com/Avic-online'
 
     # Set up the Basic Authentication with username and access token
     auth = (username, access_token)
