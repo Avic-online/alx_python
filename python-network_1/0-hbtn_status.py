@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# python code to show hbtn status
+
 import requests
 
 def fetch_status():
